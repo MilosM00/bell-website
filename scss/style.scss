@@ -64,19 +64,25 @@ header{
             list-style: none;
             display: inline-block;
             padding: 15px;
-            a{
+
+            .button-nav{
                 text-decoration: none;
                 color: white;
-                font-size: 23px;
-                font-weight: bold;
+                font-size: 22px;
                 
                 &:hover{
                     color: $secondary-color;
                     transition: 0.3s;
                 }
+            }
 
-                i{
-                    font-size: 40px;
+            .button-media{
+                color:white;
+                font-size: 35px;
+
+                &:hover{
+                    color: $secondary-color;
+                    transition: 0.3s;
                 }
             }
         }
@@ -243,7 +249,7 @@ header{
 
     .slider{
         max-width: 100rem;
-        height: 50rem;
+        height: 30rem;
         margin: 0 auto;
         
         position: relative;
@@ -254,7 +260,7 @@ header{
             position: absolute;
             top: 0;
             width: 100%;
-            height: 50rem;
+            height: 30rem;
     
             display: flex;
             align-items: center;
@@ -273,19 +279,135 @@ header{
             cursor: pointer;
             border-radius: 50%;
             color: #333;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.3);
+            font-size: 45px;
     
         }
     
         .slider-button-left{
-            left: 25%;
+            left: 22%;
             transform: translate(-50%, -50%);
         }
     
         .slider-button-right{
-            right: 25%;
+            right: 22%;
             transform: translate(50%, -50%);
         }
     }
 
+}
+
+.team{
+    padding-bottom: 100px;
+    text-align: center;
+
+    h1{
+        color: $primary-color;
+    }
+
+
+}
+
+.contact{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: whitesmoke;
+
+    h1{
+        color: $primary-color;
+        padding-bottom: 80px;
+    }
+
+    p{
+        color: $primary-color;
+        font-size: 50px;
+
+        i{
+            padding-right: 30px;
+        }
+
+        span{
+            font-size: 21px;
+            color: black;
+        }
+    }
+
+    form{
+        padding: 50px;
+
+        input{
+            background-color: white;
+            padding: 10px;
+            height: 40px;
+            width: 100%;
+            border: 0;
+            outline: none;
+            margin-bottom: 15px;
+            border: 3px solid $primary-color;
+        }
+
+        textarea{
+            display: block;
+            background-color: white;
+            height: 200px;
+            width: 100%;
+            border: 0;
+            outline: none;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 3px solid $primary-color;
+        }
+    }
+
+    a{
+        padding: 15px;
+        background-color: $primary-color;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover{
+            color: white;
+            background-color: #29c3e2;
+            transition: 0.3s;
+        }
+    }
+
+
+}
+
+footer{
+    background-color: rgb(32, 32, 32);
+    background-size: cover;
+
+    ul{
+        padding-top: 20px;
+        li{
+            list-style: none;
+            display: inline-block;
+            padding: 15px;
+
+            .button-media{
+                font-size: 35px;
+                color: white;
+
+                &:hover{
+                    color: $primary-color;
+                    transition: 0.3s;
+                }
+            }
+
+            .button-nav{
+                color:white;
+                font-size: 22px;
+                text-decoration: none;
+
+                &:hover{
+                    color: $primary-color;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
 }
