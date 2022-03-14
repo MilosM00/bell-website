@@ -56,10 +56,11 @@ header{
     background-color: $primary-color;
 
     img{
-        padding-top: 10px;
+        padding-top: 30px;
     }
 
     ul{
+        padding-top: 25px;
         li{
             list-style: none;
             display: inline-block;
@@ -219,8 +220,7 @@ header{
         padding-left: 80px;
     }
 
-    a{
-        text-decoration: none;
+    .call-button{
         padding: 20px;
         background-color: $primary-color;
         color: white;
@@ -308,12 +308,14 @@ header{
 }
 
 .team{
-    padding-bottom: 50px;
+    padding-top: 120px;
+    padding-bottom: 300px;
     text-align: center;
 
     h1{
         color: $primary-color;
         padding-bottom: 50px;
+        padding-top: 100px;
     }
 
     .icon{
