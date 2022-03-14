@@ -43,35 +43,29 @@ slider();
 const teamOverlay = function(){
     const image = document.querySelectorAll(`.image-team`);
     const overlay = document.querySelectorAll(`.overlay-team`);
-    const words = document.querySelectorAll(`.words`);
-    const h2 = document.querySelector(`h2`);
-    const h4 = document.querySelector(`h4`);
+    const hiddenTeam = document.querySelectorAll(`.hidden-team`);
 
-    image.forEach(image => {
-        image.addEventListener(`mouseenter`, (e) =>{
-            e.preventDefault();
+    const showOverlay = function (){
+        hiddenTeam.forEach(ht => {
+            ht.classList.remove(`hidden-team`);
+        });
+    };
 
-            overlay.forEach(overlay =>{
-                overlay.style.display = `block`;
-            });
+    const hideOverlay = function (){
+        hiddenTeam.forEach(ht =>{
+            ht.classList.add(`hidden-team`);
+        });
+    }    
+
+    image.forEach(images => {
+        images.addEventListener(`mouseenter`, () =>{
+            showOverlay();
         });
     });
 
-    words.forEach(words =>{
-        words.addEventListener(`mouseenter`, (e) =>{
-            words.style.backgroundColor = `#199eb8`;
-        });
-
-        words.addEventListener(`mouseleave`, (e) =>{
-            words.style.backgroundColor = `white`;
-        });
-    });
-
-    overlay.forEach(overlay =>{
-        overlay.addEventListener(`mouseleave`, (e) =>{
-            e.preventDefault();
-
-            overlay.style.display = `none`;
+    overlay.forEach(overlays => {
+        overlays.addEventListener(`mouseleave`, () =>{
+            hideOverlay();
         });
     });
 };
