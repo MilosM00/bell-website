@@ -76,37 +76,6 @@ const slider = function (){
 slider();
 
 
-const teamOverlay = function(){
-    const image = document.querySelectorAll(`.image-team`);
-    const overlay = document.querySelectorAll(`.overlay-team`);
-    const hiddenTeam = document.querySelectorAll(`.hidden-team`);
-
-    const showOverlay = function (){
-        hiddenTeam.forEach(ht => {
-            ht.classList.remove(`hidden-team`);
-        });
-    };
-
-    const hideOverlay = function (){
-        hiddenTeam.forEach(ht =>{
-            ht.classList.add(`hidden-team`);
-        });
-    }    
-
-    image.forEach(images => {
-        images.addEventListener(`mouseenter`, () =>{
-            showOverlay();
-        });
-    });
-
-    overlay.forEach(overlays => {
-        overlays.addEventListener(`mouseleave`, () =>{
-            hideOverlay();
-        });
-    });
-};
-teamOverlay();
-
 const stickyF = function (){
     const header = document.querySelector(`.header`);
     const nav = document.querySelector(`.nav`);
@@ -132,3 +101,64 @@ const stickyF = function (){
     headerObserver.observe(header);
 };
 stickyF();
+
+const teamOverlay = function(){
+    const image = document.querySelector(`.image-team`);
+    const overlay = document.querySelector(`.overlay-team`);
+    const hiddenTeam = document.querySelector(`.hidden-team`);
+    
+    const showOverlay = () => hiddenTeam.classList.remove(`hidden-team`);
+    const hideOverlay = () => hiddenTeam.classList.add(`hidden-team`);
+
+    image.addEventListener(`mouseenter`, showOverlay);
+
+    overlay.addEventListener(`mouseleave`, hideOverlay);
+};
+
+const teamOverlayTwo = function(){
+    const image = document.querySelector(`.image-team-two`);
+    const overlay = document.querySelector(`.overlay-team-two`);
+    const hiddenTeam = document.querySelector(`.hidden-team-two`);
+    
+    const showOverlay = () => hiddenTeam.classList.remove(`hidden-team-two`);
+    const hideOverlay = () => hiddenTeam.classList.add(`hidden-team-two`);
+
+    image.addEventListener(`mouseenter`, showOverlay);
+
+    overlay.addEventListener(`mouseleave`, hideOverlay);
+};
+
+const teamOverlayThree = function(){
+    const image = document.querySelector(`.image-team-three`);
+    const overlay = document.querySelector(`.overlay-team-three`);
+    const hiddenTeam = document.querySelector(`.hidden-team-three`);
+    
+    const showOverlay = () => hiddenTeam.classList.remove(`hidden-team-three`);
+    const hideOverlay = () => hiddenTeam.classList.add(`hidden-team-three`);
+
+    image.addEventListener(`mouseenter`, showOverlay);
+
+    overlay.addEventListener(`mouseleave`, hideOverlay);
+};
+
+const teamOverlayFour = function(){
+    const image = document.querySelector(`.image-team-four`);
+    const overlay = document.querySelector(`.overlay-team-four`);
+    const hiddenTeam = document.querySelector(`.hidden-team-four`);
+    
+    const showOverlay = () => hiddenTeam.classList.remove(`hidden-team-four`);
+    const hideOverlay = () => hiddenTeam.classList.add(`hidden-team-four`);
+
+    image.addEventListener(`mouseenter`, showOverlay);
+
+    overlay.addEventListener(`mouseleave`, hideOverlay);
+};
+
+
+const initTO = function(){
+    teamOverlay();
+    teamOverlayTwo();
+    teamOverlayThree();
+    teamOverlayFour();
+};
+initTO();

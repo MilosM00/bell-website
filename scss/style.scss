@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 $primary-color: #199eb8;
 $secondary-color: #e04f00;
 
@@ -96,7 +100,7 @@ header{
 
 .about{
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 120px;
 
     h1{
         text-align: center;
@@ -109,8 +113,6 @@ header{
         padding-bottom: 100px;
     }
 
-    padding-bottom: 120px;
-
     .circle{
         border-radius: 50%;
         background-color: $primary-color;
@@ -120,8 +122,9 @@ header{
         display: grid;
         place-items: center;
 
+        margin-left: 52px;
+
         .circle2{
-            place-items: center;
             background-color: white;
             border-radius: 50%;
             width: 180px;
@@ -363,7 +366,7 @@ header{
             height: 100%;
         }
 
-        .overlay-team{
+        .overlay-team, .overlay-team-two, .overlay-team-three, .overlay-team-four{
             background-color: rgba(0, 0, 0, 0.6);
             position: absolute;
             width: 100%;
@@ -403,7 +406,7 @@ header{
             }
         }
 
-        .hidden-team{
+        .hidden-team, .hidden-team-two, .hidden-team-three, .hidden-team-four{
             display: none;
         }
 
